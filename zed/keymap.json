@@ -1,0 +1,298 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  {
+    "context": "Workspace",
+    "bindings": {
+      // "shift shift": "file_finder::Toggle"
+    },
+  },
+  {
+    "context": "Editor && vim_mode == insert",
+    "bindings": {
+      // "j k": "vim::NormalBefore"
+    },
+  },
+  {
+    "context": "Editor",
+    "unbind": {
+      "ctrl-{": "editor::Fold"
+    }
+  },
+  {
+    "context": "Editor",
+    "unbind": {
+      "ctrl-shift-down": [
+        "editor::SelectNext",
+        {
+          "replace_newest": false
+        }
+      ]
+    }
+  },
+  {
+    "context": "Editor",
+    "unbind": {
+      "ctrl-shift-up": [
+        "editor::SelectPrevious",
+        {
+          "replace_newest": false
+        }
+      ]
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-shift-up": [
+        "editor::AddSelectionAbove",
+        {
+          "skip_soft_wrap": true
+        }
+      ]
+    }
+  },
+  {
+    "context": "Editor",
+    "unbind": {
+      "alt-shift-up": [
+        "editor::AddSelectionAbove",
+        {
+          "skip_soft_wrap": true
+        }
+      ]
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-shift-down": [
+        "editor::AddSelectionBelow",
+        {
+          "skip_soft_wrap": true
+        }
+      ]
+    }
+  },
+  {
+    "context": "Editor",
+    "unbind": {
+      "alt-shift-down": [
+        "editor::AddSelectionBelow",
+        {
+          "skip_soft_wrap": true
+        }
+      ]
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-.": "editor::ToggleFold"
+    }
+  },
+  {
+    "context": "Editor",
+    "unbind": {
+      "ctrl-k ctrl-l": "editor::ToggleFold"
+    }
+  },
+  {
+    "context": "Editor",
+    "unbind": {
+      "ctrl-k ctrl-0": "editor::FoldAll"
+    }
+  },
+  {
+    "context": "Workspace || Editor",
+    "unbind": {
+      "ctrl-shift-k": "git::Push"
+    }
+  },
+  {
+    "context": "GitPanel",
+    "unbind": {
+      "ctrl-g down": "git::Pull"
+    }
+  },
+  {
+    "context": "GitPanel",
+    "unbind": {
+      "ctrl-g up": "git::Push"
+    }
+  },
+  {
+    "context": "GitPanel",
+    "unbind": {
+      "ctrl-g d": "git::Diff"
+    }
+  },
+  {
+    "context": "AcpThread > Editor",
+    "unbind": {
+      "ctrl-shift-d": "git::Diff"
+    }
+  },
+  {
+    "context": "CommitEditor > Editor",
+    "unbind": {
+      "ctrl-shift-enter": "git::Amend"
+    }
+  },
+  {
+    "context": "GitDiff > Editor",
+    "unbind": {
+      "ctrl-shift-enter": "git::Amend"
+    }
+  },
+  {
+    "context": "GitPanel",
+    "unbind": {
+      "ctrl-shift-enter": "git::Amend"
+    }
+  },
+  {
+    "context": "GitPanel",
+    "unbind": {
+      "ctrl-g ctrl-g": "git::Fetch"
+    }
+  },
+  {
+    "context": "GitCommit > Editor",
+    "unbind": {
+      "ctrl-shift-enter": "git::Amend"
+    }
+  },
+  {
+    "context": "Editor",
+    "unbind": {
+      "alt-g b": "git::Blame"
+    }
+  },
+  {
+    "unbind": {
+      "ctrl-~": "git::Branch"
+    }
+  },
+  {
+    "context": "CommitEditor > Editor",
+    "unbind": {
+      "ctrl-enter": "git::Commit"
+    }
+  },
+  {
+    "context": "GitDiff > Editor",
+    "unbind": {
+      "ctrl-enter": "git::Commit"
+    }
+  },
+  {
+    "context": "GitPanel",
+    "unbind": {
+      "ctrl-enter": "git::Commit"
+    }
+  },
+  {
+    "context": "GitCommit > Editor",
+    "unbind": {
+      "ctrl-enter": "git::Commit"
+    }
+  },
+  {
+    "context": "Workspace",
+    "unbind": {
+      "ctrl-alt-shift-b": "git::Branch"
+    }
+  },
+  {
+    "context": "Editor && !agent_diff",
+    "unbind": {
+      "ctrl-k ctrl-r": "git::Restore"
+    }
+  },
+  {
+    "context": "GitPanel",
+    "unbind": {
+      "ctrl-g shift-up": "git::ForcePush"
+    }
+  },
+  {
+    "context": "GitPanel && ChangesList && !GitBranchSelector",
+    "unbind": {
+      "alt-y": "git::StageFile"
+    }
+  },
+  {
+    "context": "Workspace",
+    "unbind": {
+      "ctrl-shift-d": "debug_panel::ToggleFocus"
+    }
+  },
+  {
+    "context": "Editor",
+    "unbind": {
+      "alt-g r": "git::ReviewDiff"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-shift-d": "editor::ToggleSelectedDiffHunks"
+    }
+  },
+  {
+    "context": "Editor",
+    "unbind": {
+      "ctrl-'": "editor::ToggleSelectedDiffHunks"
+    }
+  },
+  {
+    "context": "Editor",
+    "unbind": {
+      "ctrl-\"": "editor::ExpandAllDiffHunks"
+    }
+  },
+  {
+    "context": "Editor",
+    "unbind": {
+      "ctrl-k ctrl-d": [
+        "editor::SelectNext",
+        {
+          "replace_newest": true
+        }
+      ]
+    }
+  },
+  {
+    "context": "Editor",
+    "unbind": {
+      "alt-down": "editor::MoveLineDown"
+    }
+  },
+  {
+    "context": "Editor",
+    "unbind": {
+      "alt-up": "editor::MoveLineUp"
+    }
+  },
+  {
+    "bindings": {
+      "alt-down": "editor::GoToNextSymbol"
+    }
+  },
+  {
+    "bindings": {
+      "alt-up": "editor::GoToPreviousSymbol"
+    }
+  },
+  {
+    "unbind": {
+      "f11": "zed::ToggleFullScreen"
+    }
+  }
+]

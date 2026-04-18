@@ -1,0 +1,31 @@
+{
+    "host": "localhost",
+    "port": 4455,
+    "http_enabled": true,
+    "http_host": "localhost",
+    "http_port": 4456,
+    "auth_token": "C5em4WkwHpl9lyRPz2kbTnVFp1lfEycN9cUKaiblsDk",
+    "analog_enabled": false,
+    "analog_device": null,
+    "key_whitelist": [
+        "key_w",
+        "key_a",
+        "key_s",
+        "key_d",
+        "mouse_wheel",
+        "mouse_left",
+        "mouse_right",
+        "key_space",
+        "key_leftshift",
+        "key_leftctrl"
+    ],
+    "balloon_notifications": false,
+    "dismissed_versions": [],
+    "raw_mouse_enabled": false,
+    "raw_mouse_min_delta": 0,
+    "linux_raw_mouse_device": "",
+    "cpu_affinity": [
+        0,
+        1
+    ]
+}

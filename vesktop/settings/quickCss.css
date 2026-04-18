@@ -1,0 +1,175 @@
+/**
+ * @name midnight
+ * @description a dark, customizable discord theme.
+ * @author refact0r
+ * @version 2.1.1
+ * @invite nz87hXyvcy
+ * @website https://github.com/refact0r/midnight-discord
+ * @source https://github.com/refact0r/midnight-discord/blob/master/themes/midnight.theme.css
+ * @authorId 508863359777505290
+ * @authorLink https://www.refact0r.dev
+*/
+
+/* import theme modules */
+@import url("https://refact0r.github.io/midnight-discord/build/midnight.css");
+
+
+/* disable bs */
+[aria-label="Apps"] {
+display:none
+}
+[aria-label="Open sticker picker"] {
+display:none
+}
+[aria-label="Send a gift"] {
+display:none
+}
+[aria-label="Boost this server"] {
+display:none
+}
+[id="channel-attach-THREAD"] {
+display:none
+}
+div[class^="channelAppLauncher"] {
+display:none
+}
+
+/* no aliasing */
+* {
+	font-synthesis: none !important;
+  	text-rendering: geometricPrecision !important;
+  	-webkit-font-smoothing: none !important;
+  	-moz-osx-font-smoothing: none !important;
+  	image-rendering: pixelated !important;
+}
+
+body {
+  /* font options */
+  --font: "IBM Plex Sans"; /* change to '' for default discord font */
+  --code-font: "Blex Nerd Font Mono"; /* change to '' for default discord font */
+  font-weight: 400; /* normal text font weight. DOES NOT AFFECT BOLD TEXT */
+
+  /* sizes */
+  --gap: 8px; /* spacing between panels */
+  --divider-thickness: 4px; /* thickness of unread messages divider and highlighted message borders */
+  --border-thickness: 1px; /* thickness of borders around main panels. DOES NOT AFFECT OTHER BORDERS */
+
+  /* animation/transition options */
+  --animations: on; /* off: disable animations/transitions, on: enable animations/transitions */
+  --list-item-transition: 0.2s ease; /* transition for list items */
+  --dms-icon-svg-transition: 0.4s ease; /* transition for the dms icon */
+  --border-hover-transition: 0.2s ease; /* transition for borders when hovered */
+
+  /* top bar options */
+  --top-bar-height: var(
+    --gap
+  ); /* height of the top bar (discord default is 36px, old discord style is 24px, var(--gap) recommended if button position is set to titlebar) */
+  --top-bar-button-position: titlebar; /* off: default position, hide: hide buttons completely, serverlist: move inbox button to server list, titlebar: move inbox button to channel titlebar (will hide title) */
+  --top-bar-title-position: hide; /* off: default centered position, hide: hide title completely, left: left align title (like old discord) */
+  --subtle-top-bar-title: hide; /* off: default, on: hide the icon and use subtle text color (like old discord) */
+
+  /* window controls */
+  --custom-window-controls: ; /* off: default window controls, on: custom window controls */
+  --window-control-size: ; /* size of custom window controls */
+
+  /* dms button options */
+  --custom-dms-icon: off; /* off: use default discord icon, hide: remove icon entirely, custom: use custom icon */
+  --dms-icon-svg-url: url("https://refact0r.github.io/midnight-discord/assets/Font_Awesome_5_solid_moon.svg"); /* icon svg url. MUST BE A SVG. */
+  --dms-icon-svg-size: 90%; /* size of the svg (css mask-size property) */
+  --dms-icon-color-before: var(--icon-secondary); /* normal icon color */
+  --dms-icon-color-after: var(--white); /* icon color when button is hovered/selected */
+  --custom-dms-background: off; /* off to disable, image to use a background image (must set url variable below), color to use a custom color/gradient */
+  --dms-background-image-url: url(""); /* url of the background image */
+  --dms-background-image-size: cover; /* size of the background image (css background-size property) */
+  --dms-background-color: linear-gradient(
+    70deg,
+    var(--blue-2),
+    var(--purple-2),
+    var(--red-2)
+  ); /* fixed color/gradient (css background property) */
+
+  /* background image options */
+  --background-image: off; /* off: no background image, on: enable background image (must set url variable below) */
+  --background-image-url: url(""); /* url of the background image */
+
+  /* transparency/blur options */
+  /* NOTE: TO USE TRANSPARENCY/BLUR, YOU MUST HAVE TRANSPARENT BG COLORS. FOR EXAMPLE: --bg-4: hsla(220, 15%, 10%, 0.7); */
+  --transparency-tweaks: on; /* off: no changes, on: remove some elements for better transparency */
+  --remove-bg-layer: off; /* off: no changes, on: remove the base --bg-3 layer for use with window transparency (WILL OVERRIDE BACKGROUND IMAGE) */
+  --panel-blur: on; /* off: no changes, on: blur the background of panels */
+  --blur-amount: 12px; /* amount of blur */
+  --bg-floating: var(
+    --bg-3
+  ); /* set this to a more opaque color if floating panels look too transparent. only applies if panel blur is on  */
+
+  /* chatbar options */
+  --custom-chatbar: separated; /* off: default chatbar, aligned: chatbar aligned with the user panel, separated: chatbar separated from chat */
+  --chatbar-height: 47px; /* height of the chatbar (52px by default, 47px recommended for aligned, 56px recommended for separated) */
+  --chatbar-padding: 8px; /* padding of the chatbar. only applies in aligned mode. */
+
+  /* other options */
+  --small-user-panel: on; /* off: default user panel, on: smaller user panel like in old discord */
+}
+
+/* color options */
+:root {
+  --colors: on;
+
+  /* Text colors */
+  --text-0: #e6e1cf; /* base text */
+  --text-1: #e6e1cf; /* standard text */
+  --text-2: #ffb454; /* headings / important */
+  --text-3: #e6e1cf; /* normal text */
+  --text-4: #5c6773; /* icons / channel labels */
+  --text-5: #5c6773; /* timestamps / muted text */
+
+  /* Backgrounds */
+  --bg-1: #151a1e; /* button pressed state or similar */
+  --bg-2: #14191f; /* panel backgrounds */
+  --bg-3: #0d1017; /* spacing / deepest background */
+  --bg-4: #0d1017; /* main background */
+
+  /* Hover / active states (semi‑transparent on darkest bg) */
+  --hover: rgba(230, 225, 207, 0.1); /* subtle highlight */
+  --active: rgba(230, 225, 207, 0.2);
+  --active-2: rgba(230, 225, 207, 0.3);
+  --message-hover: rgba(0, 0, 0, 0.1);
+
+  /* Accents (used sparingly) */
+  --accent-1: #e6b450;
+  --accent-2: #f29718;
+  --accent-3: #36a3d9;
+  --accent-4: #f07178;
+  /* But avoid using these as button BG by default */
+
+  /* Mention / reply highlight (more muted) */
+  --mention: linear-gradient(to right, rgba(242, 151, 24, 0.1) 40%, transparent);
+  --mention-hover: linear-gradient(to right, rgba(242, 151, 24, 0.05) 40%, transparent);
+  --reply: linear-gradient(to right, rgba(230, 225, 207, 0.1) 40%, transparent);
+  --reply-hover: linear-gradient(to right, rgba(230, 225, 207, 0.05) 40%, transparent);
+
+  /* Status indicators */
+  --online: #87b35c;
+  --dnd: #f07178;
+  --idle: #e6b450;
+  --streaming: #36a3d9;
+  --offline: #3e4b59;
+
+  /* Borders: subtle, based on text color */
+  --border-light: rgba(230, 225, 207, 0.1);
+  --border: rgba(230, 225, 207, 0.2);
+  --border-hover: rgba(230, 225, 207, 0.2);
+  --button-border: rgba(230, 225, 207, 0.1);
+
+  /* Semantic colors aligned to Ayu palette */
+  --red-1: #ff3333;
+  --red-2: #ff3333;
+  --green-1: #b8cc52;
+  --green-2: #b8cc52;
+  --blue-1: #36a3d9;
+  --blue-2: #36a3d9;
+  --yellow-1: #ffb454;
+  --yellow-2: #ffb454;
+  --purple-1: #e6b673;
+  --purple-2: #e6b673;
+}

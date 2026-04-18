@@ -1,0 +1,202 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "buffer_font_family": "FiraCode Nerd Font",
+  "collaboration_panel": {
+    "button": false,
+  },
+  "git_panel": {
+    "show_count_badge": false,
+    "diff_stats": true,
+    "file_icons": true,
+    "tree_view": true,
+    "collapse_untracked_diff": false,
+    "sort_by_path": false,
+    "status_style": "label_color",
+    "button": true,
+  },
+  "terminal": {
+    "toolbar": {
+      "breadcrumbs": false,
+    },
+    "show_count_badge": false,
+  },
+  "active_pane_modifiers": {
+    "border_size": 0.0,
+    "inactive_opacity": 0.8,
+  },
+  "focus_follows_mouse": {
+    "enabled": false,
+  },
+  "bottom_dock_layout": "contained",
+  "search": {
+    "button": true,
+  },
+  "show_completions_on_input": false,
+  "show_signature_help_after_edits": false,
+  "proxy": "",
+  "agent": {
+    "button": false,
+    "show_merge_conflict_indicator": false,
+    "sidebar_side": "left",
+    "favorite_models": [],
+    "model_parameters": [],
+  },
+  "autoscroll_on_clicks": true,
+  "format_on_save": "off",
+  "diff_view_style": "unified",
+  "outline_panel": {
+    "button": false,
+  },
+  "tabs": {
+    "show_close_button": "always",
+    "file_icons": false,
+    "git_status": true,
+  },
+  "tab_bar": {
+    "show_tab_bar_buttons": false,
+    "show_nav_history_buttons": false,
+    "show_pinned_tabs_in_separate_row": true,
+    "show": true,
+  },
+  "title_bar": {
+    "show_branch_name": true,
+    "button_layout": "platform_default",
+    "show_sign_in": false,
+    "show_menus": false,
+    "show_user_picture": false,
+    "show_user_menu": false,
+    "show_onboarding_banner": false,
+    "show_project_items": true,
+    "show_branch_icon": true,
+  },
+  "project_panel": {
+    "show_diagnostics": "errors",
+    "hide_root": true,
+    "hide_hidden": false,
+    "diagnostic_badges": true,
+    "scrollbar": {
+      "horizontal_scroll": true,
+    },
+    "bold_folder_labels": false,
+    "indent_size": 13.0,
+    "entry_spacing": "standard",
+    "button": true,
+  },
+  "status_bar": {
+    "show_active_file": false,
+    "cursor_position_button": true,
+    "active_language_button": false,
+  },
+  "diagnostics": {
+    "inline": {
+      "min_column": 0,
+      "enabled": true,
+    },
+  },
+  "prettier": {
+    "allowed": true,
+  },
+  "colorize_brackets": true,
+  "tasks": {
+    "enabled": true,
+  },
+  "inlay_hints": {
+    "show_other_hints": true,
+    "show_parameter_hints": false,
+    "show_type_hints": false,
+    "show_value_hints": true,
+    "enabled": true,
+  },
+  "show_whitespaces": "selection",
+  "ensure_final_newline_on_save": false,
+  "indent_guides": {
+    "background_coloring": "disabled",
+    "coloring": "indent_aware",
+    "line_width": 1,
+  },
+  "soft_wrap": "none",
+  "hard_tabs": false,
+  "toolbar": {
+    "code_actions": false,
+    "agent_review": false,
+    "selections_menu": false,
+    "quick_actions": false,
+    "breadcrumbs": false,
+  },
+  "minimap": {
+    "max_width_columns": 50,
+    "current_line_highlight": "all",
+    "thumb_border": "none",
+    "thumb": "always",
+    "show": "always",
+  },
+  "scrollbar": {
+    "axes": {
+      "horizontal": false,
+      "vertical": true,
+    },
+    "diagnostics": "error",
+    "git_diff": true,
+    "cursors": true,
+    "show": "never",
+  },
+  "inline_code_actions": false,
+  "gutter": {
+    "folds": false,
+    "breakpoints": false,
+    "runnables": false,
+    "line_numbers": true,
+  },
+  "hover_popover_enabled": false,
+  "auto_signature_help": false,
+  "sticky_scroll": {
+    "enabled": true,
+  },
+  "which_key": {
+    "enabled": true,
+  },
+  "helix_mode": false,
+  "minimum_contrast_for_highlights": 46.0,
+  "rounded_selection": true,
+  "selection_highlight": true,
+  "current_line_highlight": "all",
+  "cursor_shape": "block",
+  "cursor_blink": false,
+  "text_rendering_mode": "platform_default",
+  "ui_font_family": ".ZedSans",
+  "buffer_font_weight": 400.0,
+  "buffer_line_height": "comfortable",
+  "icon_theme": {
+    "mode": "light",
+    "light": "Catppuccin Mocha",
+    "dark": "Catppuccin Mocha"
+  },
+  "agent_servers": {
+    "claude-acp": {
+      "type": "registry",
+    },
+  },
+  "autosave": "on_focus_change",
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false,
+  },
+  "session": {
+    "trust_all_worktrees": true,
+  },
+  "base_keymap": "JetBrains",
+  "ui_font_size": 18.0,
+  "buffer_font_size": 16.0,
+  "theme": {
+    "mode": "dark",
+    "light": "One Light",
+    "dark": "Base16 Gruvbox Material Dark, Hard"
+  },
+}
