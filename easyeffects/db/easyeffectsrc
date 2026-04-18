@@ -16,6 +16,6 @@ useDefaultOutputDevice=false
 
 [Window]
 autostartOnLogin=true
-height=1067
-visiblePage=inputPage
-width=1912
+height=1049
+visiblePipeWirePage=testSignalsPage
+width=955

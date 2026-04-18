@@ -1,0 +1,15 @@
+*
+!.gitignore
+!zed
+!hypr*
+!millennium
+!nautilus
+!obs-studio
+!quickshell
+!vesktop
+!xdg-desktop-portal
+!easyeffects
+!gtk-3.0
+!gtk-4.0
+!systemd
+!hypatia

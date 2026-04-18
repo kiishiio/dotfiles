@@ -294,5 +294,16 @@
     "unbind": {
       "f11": "zed::ToggleFullScreen"
     }
+  },
+  {
+    "bindings": {
+      "ctrl-p": "pane::TogglePinTab"
+    }
+  },
+  {
+    "context": "Pane",
+    "unbind": {
+      "ctrl-k shift-enter": "pane::TogglePinTab"
+    }
   }
 ]

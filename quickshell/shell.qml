@@ -1,17 +1,26 @@
 import QtQuick
 import Quickshell
+import Quickshell.Io
 import QtQuick.Layouts
 import QtQuick.Controls
+import QtCore
 import Qt.labs.settings
 
 ShellRoot {
     id: root
 
+
     property var screens: Quickshell.screens
+    property string color: cfg.dark_mode ? "white" : "black" //TODO dark mode updates
+    property string current_screen: get_screen_name()
 
     function increment_screen_index() {
         cfg.screen_index = (cfg.screen_index + 1) % screens.length
         return screens[cfg.screen_index]
+    }
+
+    function get_screen_name() {
+        return root.screens[cfg.screen_index].name
     }
 
     PanelWindow {
@@ -37,9 +46,28 @@ ShellRoot {
                 Layout.fillWidth: true
                 Layout.leftMargin: 3
 
-                Button {
-                    onClicked: bar.screen = root.increment_screen_index()
-                    text: root.screens[cfg.screen_index].name || "Screen " + (cfg.screen_index + 1)
+                RowLayout {
+                    spacing: cfg.spacing
+
+                    Button {
+                        onClicked: {
+                            bar.screen = root.increment_screen_index()
+                            root.current_screen = root.get_screen_name()
+                        }
+                        text: root.screens[cfg.screen_index].name || "Screen " + (cfg.screen_index + 1)
+                    }
+
+                    Button {
+                        property string path: ".config/hypatia/example/pipeline.kdl"
+                        property string opt: "--no-pause --volume=50.0"
+
+                        onClicked: {
+                            cmd.running = false
+                            cmd.command = ["sh", "-c", "hypatia play $HOME/$0 --output $1 $2", path, root.current_screen, opt]
+                            cmd.running = true
+                        }
+                        text: "wallpaper"
+                    }
                 }
             }
 
@@ -67,6 +95,7 @@ ShellRoot {
                 Text {
                     id: clock
 
+                    color: root.color
                     anchors.right: parent.right
                     text: Qt.formatTime(new Date(), "hh:mm:ss")
                     anchors.verticalCenter: parent.verticalCenter
@@ -83,12 +112,18 @@ ShellRoot {
         onTriggered: clock.text = Qt.formatTime(new Date(), "hh:mm:ss")
     }
 
+    Process {
+        id: cmd
+    }
+
     Settings {
         id: cfg
 
-        category: "ephemeral"
         fileName: ".config/presentation.ini"
 
         property int screen_index: 0
+
+        property bool dark_mode: true
+        property int spacing: 3
     }
 }

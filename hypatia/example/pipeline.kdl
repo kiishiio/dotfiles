@@ -1,0 +1,20 @@
+meta {
+    config-version {
+        major 0
+        minor 1
+    }
+
+    name "default wallpaper"
+    version "0.1"
+    authors "kiishiio"
+    description "a simple video playback wallpaper"
+}
+
+inputs {
+    video "./wallpaper.mp4" audio="false" scaling="stretch"
+}
+
+stage {
+    vert "./vert.glsl"
+    frag "./frag.glsl"
+}
